@@ -23,7 +23,8 @@ echo "-----> Fetching Docker into slug"
 curl --progress-bar -o /tmp/docker-pkg.deb https://download.docker.com/linux/ubuntu/dists/trusty/pool/stable/amd64/
 
 echo "-----> uncompress pkg"
-sudo dpkg -i /tmp/docker-pkg.deb
+dpkg -i /tmp/docker-pkg.deb
 
 echo "-----> docker installation done"
-echo docker --version
+docker --version
+echo $(docker --version)
